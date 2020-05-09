@@ -3,8 +3,16 @@
 *.cf
 *.s
 *_tb
+*.swp
 main_ram.bin
 tests/*/*.bin
 tests/*/*.hex
 tests/*/*.elf
 TAGS
+tags
+scripts/mw_debug/mw_debug
+loader/loader.bin
+loader/loader.hex
+loader/loader.elf
+*.swn
+*.swo
