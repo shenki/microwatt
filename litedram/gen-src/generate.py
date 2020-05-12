@@ -104,7 +104,6 @@ def generate_one(t, mw_init):
     # Override values for mw_init
     if mw_init:
         core_config["cpu"] = None
-        core_config["csr_expose"] = True
         core_config["csr_align"] = 64
 
     # Generate core
