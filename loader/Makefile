@@ -25,7 +25,10 @@ all: loader.hex
 load: loader.bin
 	$(MW_DEBUG) -b jtag load $^ $(BRAM_ADDRESS)
 
-loader.elf: loader.o head.o console.o load.o printf.o
+%.lds : %.lds.S
+	$(CC) -I../include -P -E $< -o $@
+
+loader.elf: loader.o head.o console.o load.o printf.o | powerpc.lds
 	$(LD) $(LDFLAGS) -o $@ $^
 
 loader.bin: loader.elf

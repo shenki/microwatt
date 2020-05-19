@@ -14,7 +14,9 @@
  * limitations under the License.
  */
 
-#define STACK_TOP 0xf0002000
+#include <microwatt_soc.h>
+
+#define STACK_TOP (BRAM_BASE + 0x2000)
 
 #define FIXUP_ENDIAN						   \
 	tdi   0,0,0x48;	  /* Reverse endian of b . + 8		*/ \
